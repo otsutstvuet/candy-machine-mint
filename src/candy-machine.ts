@@ -26,9 +26,6 @@ export interface CandyMachine {
 
 interface CandyMachineState {
   candyMachine: CandyMachine;
-  itemsAvailable: number;
-  itemsRedeemed: number;
-  itemsRemaining: number;
   goLiveDate: Date,
 }
 
