@@ -42,6 +42,10 @@ const Home = (props: HomeProps) => {
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
 
+  const [itemsAvailable, setItemsAvailable] = useState(0);
+  const [itemsRedeemed, setItemsRedeemed] = useState(0);
+  const [itemsRemaining, setItemsRemaining] = useState(0);
+
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
     message: "",
@@ -168,13 +172,7 @@ const Home = (props: HomeProps) => {
       )}
 
       {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
-
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
-
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
-
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
-
+      
       <MintContainer>
         {!wallet ? (
           <ConnectButton>Connect Wallet</ConnectButton>
@@ -235,3 +233,4 @@ const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
 };
 
 export default Home;
+
