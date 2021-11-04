@@ -233,4 +233,3 @@ const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
 };
 
 export default Home;
-

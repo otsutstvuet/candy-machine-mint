@@ -59,10 +59,10 @@ const theme = createTheme({
                 padding: '12px 16px',
             },
             startIcon: {
-                marginRight: 8,
+                marginRight: 20,
             },
             endIcon: {
-                marginLeft: 8,
+                marginLeft: 20,
             },
         },
     },
